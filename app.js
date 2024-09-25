@@ -43,8 +43,11 @@ RL.on('close', () => {
     const VALUE = pair[1];
     VALUE.change = VALUE.popu15 / VALUE.popu10;
   }
-  console.log(MAP);
+  // ４　変化率ごとに並べる
+  const RANKING_ARRAY = Array.from(MAP).sort((pair1, pair2) => {
+    return pair2[1].change - pair1[1].change;
+  });
+  console.log(RANKING_ARRAY);
 });
 
-// ４　変化率ごとに並べる
 // ５　並べられたものを表示する
