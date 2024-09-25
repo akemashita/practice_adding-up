@@ -31,7 +31,7 @@ RL.on('line', (lineString) => {
     if (year === 2015) {
       value.popu15 += popu;
     }
-    
+
     MAP.set(prefecture, value);
   }
 });
